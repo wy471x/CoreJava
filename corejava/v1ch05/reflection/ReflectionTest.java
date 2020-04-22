@@ -10,8 +10,9 @@ import java.lang.reflect.*;
  */
 public class ReflectionTest
 {
-   public static void main(String[] args)
+   public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException
    {
+	   /*
       // read class name from command line args or user input
       String name;
       if (args.length > 0) name = args[0];
@@ -46,6 +47,15 @@ public class ReflectionTest
          e.printStackTrace();
       }
       System.exit(0);
+      */
+      
+      System.out.println(Double[].class.getName());
+      System.out.println(int[].class.getName());
+      
+      String s = "java.util.Random";
+      Object m = Class.forName(s).newInstance();
+      System.out.println(m.getClass().getName());
+      
    }
 
    /**
