@@ -14,6 +14,6 @@ public class ObjectAnalyzerTest
       ArrayList<Integer> squares = new ArrayList<>();
       for (int i = 1; i <= 5; i++)
          squares.add(i * i);
-      System.out.println(new ObjectAnalyzer().toString(squares));
+      System.out.println(new objectAnalyzer.ObjectAnalyzer().toString(squares));
    }
 }
