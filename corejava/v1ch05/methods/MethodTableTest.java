@@ -14,8 +14,13 @@ public class MethodTableTest
       // get method pointers to the square and sqrt methods
       Method square = MethodTableTest.class.getMethod("square", double.class);
       Method sqrt = Math.class.getMethod("sqrt", double.class);
+      Method sin = Math.class.getMethod("sin", double.class);
+
+      for(double x = 1; x <= 10.0; x++)
+         System.out.printf("%10.4f | %10.4f%n", x, Math.sin(Math.toRadians(x)));
 
       // print tables of x- and y-values
+
 
       printTable(1, 10, 10, square);
       printTable(1, 10, 10, sqrt);
@@ -50,7 +55,7 @@ public class MethodTableTest
          try
          {
             double y = (Double) f.invoke(null, x);
-            System.out.printf("%10.4f | %10.4f%n", x, y);
+            System.out.printf("%10.4f | %10.4f\n", x, y);
          }
          catch (Exception e)
          {
