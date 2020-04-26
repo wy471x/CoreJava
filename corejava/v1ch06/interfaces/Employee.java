@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Employee implements Comparable<Employee>
+public class Employee implements Comparable//<Employee>
 {
    private String name;
    private double salary;
@@ -33,8 +33,9 @@ public class Employee implements Comparable<Employee>
     * @return a negative value if this employee has a lower salary than
     * otherObject, 0 if the salaries are the same, a positive value otherwise
     */
-   public int compareTo(Employee other)
+   public int compareTo(/*Employee*/ Object otherObject)
    {
+      Employee other = (Employee)otherObject;
       return Double.compare(salary, other.salary);
    }
 }
