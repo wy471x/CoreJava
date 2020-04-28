@@ -9,6 +9,14 @@ public class CloneTest
 {
    public static void main(String[] args)
    {
+
+      int[] luckyNumbers= {2, 3, 5, 7, 11, 13};
+
+      int[] cloned = luckyNumbers.clone();
+      cloned[5] = 12;
+      System.out.println(luckyNumbers[5]);
+      System.out.println(cloned[5]);
+
       try
       {
          Employee original = new Employee("John Q. Public", 50000);

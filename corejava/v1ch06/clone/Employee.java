@@ -18,13 +18,12 @@ public class Employee implements Cloneable
 
    public Employee clone() throws CloneNotSupportedException
    {
-      // call Object.clone()
-      Employee cloned = (Employee) super.clone();
+         // call Object.clone()
+         Employee cloned = (Employee) super.clone();
 
-      // clone mutable fields
-      cloned.hireDay = (Date) hireDay.clone();
-
-      return cloned;
+         // clone mutable fields
+         cloned.hireDay = (Date) hireDay.clone();
+         return cloned;
    }
 
    /**
