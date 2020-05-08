@@ -48,7 +48,7 @@ class TalkingClock
     */
    public void start()
    {
-      ActionListener listener = new TimePrinter();
+      ActionListener listener = this.new TimePrinter();
       Timer t = new Timer(interval, listener);
       t.start();
    }
@@ -58,7 +58,7 @@ class TalkingClock
       public void actionPerformed(ActionEvent event)
       {
          System.out.println("At the tone, the time is " + new Date());
-         if (beep) Toolkit.getDefaultToolkit().beep();
+         if ( /*beep*/TalkingClock.this.beep) Toolkit.getDefaultToolkit().beep();
       }
    }
 }
